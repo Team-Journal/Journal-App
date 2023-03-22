@@ -1,8 +1,6 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {MainStackNavigator} from './components/StackNavigator';
-// import SignUp from './components/SignUp';
-// import Login from './components/Login';
 
 export default function App() {
   return (
@@ -11,3 +9,14 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+// import {View} from 'react-native';
+// import DoneSignUp from './components/DoneSignUp';
+
+// export default function App() {
+//   return (
+//     <View>
+//       <DoneSignUp />
+//     </View>
+//   );
+// }
