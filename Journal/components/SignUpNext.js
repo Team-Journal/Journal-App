@@ -12,7 +12,7 @@ import DropShadow from 'react-native-drop-shadow';
 import logo from '../src/logo.png';
 import check from '../src/check.png';
 
-export default function SignUp({navigation}) {
+export default function SignUpNext({navigation}) {
   return (
     <SafeAreaView style={styles.container_f}>
       <View style={styles.container}>
@@ -22,17 +22,22 @@ export default function SignUp({navigation}) {
           <View style={styles.emailView}>
             <TextInput
               style={styles.emailInput}
-              placeholder="이메일을 입력해주세요"
+              placeholder="아이디를 입력해주세요"
               placeholderTextColor="#BDBFCF"
             />
             <TouchableOpacity activeOpacity={0.7}>
-              <Text style={styles.sendCode}>코드 발송</Text>
+              <Text style={styles.sendCode}>중복 확인</Text>
             </TouchableOpacity>
           </View>
-          <View style={styles.codeView}>
+          <TextInput
+            style={styles.codeInput}
+            placeholder="비밀번호를 입력해주세요"
+            placeholderTextColor="#BDBFCF"
+          />
+          <View style={styles.checkPW}>
             <TextInput
               style={styles.codeInput}
-              placeholder="코드를 입력해주세요"
+              placeholder="비밀번호 확인"
               placeholderTextColor="#BDBFCF"
             />
             <Image style={styles.check} source={check} />
@@ -45,7 +50,7 @@ export default function SignUp({navigation}) {
           </View>
           <TouchableOpacity
             activeOpacity={0.7}
-            onPress={() => navigation.navigate('SignUpNext')}>
+            onPress={() => navigation.navigate('Login')}>
             <Text style={styles.next}>다음으로</Text>
           </TouchableOpacity>
         </View>
@@ -85,6 +90,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   codeInput: {
+    marginTop: 20,
     padding: 10,
     fontSize: 10,
     width: 304,
@@ -97,12 +103,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   emailView: {
-    marginTop: 130,
+    marginTop: 100,
     flexDirection: 'row',
   },
   codeView: {
     marginTop: 25,
-    flexDirection: 'row',
+    flexDirection: 'column',
   },
   sendCode: {
     textAlign: 'center',
@@ -126,7 +132,7 @@ const styles = StyleSheet.create({
     width: 18,
     height: 18,
     marginLeft: -30,
-    marginTop: 16,
+    marginTop: 35,
   },
   haveIDView: {
     marginTop: 5,
@@ -145,7 +151,7 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   },
   next: {
-    top: 240,
+    top: 205,
     fontSize: 10,
     width: 304,
     height: 40,
@@ -161,5 +167,8 @@ const styles = StyleSheet.create({
       },
       android: {},
     }),
+  },
+  checkPW: {
+    flexDirection: 'row',
   },
 });

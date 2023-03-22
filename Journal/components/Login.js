@@ -35,7 +35,7 @@ export default function Login({navigation}) {
             <Image style={styles.check} source={check} />
           </View>
           <TouchableOpacity activeOpacity={0.7}>
-            <Text style={styles.next}>다음으로</Text>
+            <Text style={styles.next}>로그인하기</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   emailView: {
-    marginTop: 100,
+    marginTop: 130,
     flexDirection: 'row',
   },
   codeView: {
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   next: {
-    marginTop: 270,
+    top: 255,
     fontSize: 10,
     width: 304,
     height: 40,
