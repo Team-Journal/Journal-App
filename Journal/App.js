@@ -1,18 +1,13 @@
 import React from 'react';
-import SignUp from './components/SignUp';
-import {View, SafeAreaView, StyleSheet} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {MainStackNavigator} from './components/StackNavigator';
+// import SignUp from './components/SignUp';
+// import Login from './components/Login';
 
-function App() {
+export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <SignUp />
-    </SafeAreaView>
+    <NavigationContainer>
+      <MainStackNavigator />
+    </NavigationContainer>
   );
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FDFDFF',
-  },
-});
-export default App;

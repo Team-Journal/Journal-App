@@ -12,36 +12,27 @@ import DropShadow from 'react-native-drop-shadow';
 import logo from '../src/logo.png';
 import check from '../src/check.png';
 
-export default function SignUp({navigation}) {
+export default function Login({navigation}) {
   return (
     <SafeAreaView style={styles.container_f}>
       <View style={styles.container}>
         <Image style={styles.logo} source={logo} />
-        <Text style={styles.signUp}>회원가입</Text>
+        <Text style={styles.login}>로그인</Text>
         <View>
           <View style={styles.emailView}>
             <TextInput
               style={styles.emailInput}
-              placeholder="이메일을 입력해주세요"
+              placeholder="아이디를 입력해주세요"
               placeholderTextColor="#BDBFCF"
             />
-            <TouchableOpacity activeOpacity={0.7}>
-              <Text style={styles.sendCode}>코드 발송</Text>
-            </TouchableOpacity>
           </View>
           <View style={styles.codeView}>
             <TextInput
               style={styles.codeInput}
-              placeholder="코드를 입력해주세요"
+              placeholder="비밀번호를 입력해주세요"
               placeholderTextColor="#BDBFCF"
             />
             <Image style={styles.check} source={check} />
-          </View>
-          <View style={styles.haveIDView}>
-            <Text style={styles.haveID}>이미 아이디가 있으신가요?</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-              <Text style={styles.goToLogin}>로그인하기</Text>
-            </TouchableOpacity>
           </View>
           <TouchableOpacity activeOpacity={0.7}>
             <Text style={styles.next}>다음으로</Text>
@@ -65,7 +56,7 @@ const styles = StyleSheet.create({
     width: 52,
     height: 46,
   },
-  signUp: {
+  login: {
     marginTop: 15,
     fontSize: 15,
     color: '#6C708D',
@@ -73,7 +64,7 @@ const styles = StyleSheet.create({
   emailInput: {
     padding: 10,
     fontSize: 10,
-    width: 240,
+    width: 304,
     height: 50,
     backgroundColor: '#fff',
     shadowColor: '#000',
@@ -102,45 +93,11 @@ const styles = StyleSheet.create({
     marginTop: 25,
     flexDirection: 'row',
   },
-  sendCode: {
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    ...Platform.select({
-      ios: {
-        lineHeight: 50, // as same as height
-      },
-      android: {},
-    }),
-    fontSize: 10,
-    marginLeft: 7,
-    width: 60,
-    height: 50,
-    backgroundColor: '#ABB2EF',
-    color: '#fff',
-    borderRadius: 10,
-    overflow: 'hidden',
-  },
   check: {
     width: 18,
     height: 18,
     marginLeft: -30,
     marginTop: 16,
-  },
-  haveIDView: {
-    marginTop: 5,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginRight: -120,
-  },
-  haveID: {
-    fontSize: 10,
-    color: '#BDBFCF',
-    marginRight: 5,
-  },
-  goToLogin: {
-    fontSize: 10,
-    color: '#1A73E9',
-    textDecorationLine: 'underline',
   },
   next: {
     marginTop: 270,
