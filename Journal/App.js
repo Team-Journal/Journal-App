@@ -9,14 +9,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-// import {View} from 'react-native';
-// import DoneSignUp from './components/DoneSignUp';
-
-// export default function App() {
-//   return (
-//     <View>
-//       <DoneSignUp />
-//     </View>
-//   );
-// }

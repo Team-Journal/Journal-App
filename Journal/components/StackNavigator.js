@@ -6,6 +6,8 @@ import SignUpNext from '../components/SignUpNext';
 import Login from '../components/Login';
 import DoneSignUp from '../components/DoneSignUp';
 import MainPage from '../components/MainPage';
+import PostPage from '../components/PostPage';
+import MyPage from '../components/MyPage';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +19,8 @@ const MainStackNavigator = () => {
       <Stack.Screen name="SignUpNext" component={SignUpNext} /> */}
       <Stack.Screen name="DoneSignUp" component={DoneSignUp} />
       <Stack.Screen name="MainPage" component={MainPage} />
+      <Stack.Screen name="PostPage" component={PostPage} />
+      <Stack.Screen name="MyPage" component={MyPage} />
     </Stack.Navigator>
   );
 };
