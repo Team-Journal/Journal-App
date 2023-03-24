@@ -34,7 +34,9 @@ export default function Login({navigation}) {
             />
             <Image style={styles.check} source={check} />
           </View>
-          <TouchableOpacity activeOpacity={0.7}>
+          <TouchableOpacity
+            activeOpacity={0.7}
+            onPress={() => navigation.navigate('DoneSignUp')}>
             <Text style={styles.next}>로그인하기</Text>
           </TouchableOpacity>
         </View>

@@ -12,9 +12,9 @@ const Stack = createStackNavigator();
 const MainStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}} independent={true}>
-      <Stack.Screen name="SignUp" component={SignUp} />
+      {/* <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="SignUpNext" component={SignUpNext} />
+      <Stack.Screen name="SignUpNext" component={SignUpNext} /> */}
       <Stack.Screen name="DoneSignUp" component={DoneSignUp} />
       <Stack.Screen name="MainPage" component={MainPage} />
     </Stack.Navigator>
